@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <title>天翼铃声</title>
+    <link rel="shortcut icon" href="/download/w/images/favicon.ico">
+    <script type="text/javascript" src="../javascripts/zepto.min.js"></script>
+    <style type="text/css">
+        *{ margin:0; padding:0;}
+        body{font:12px 'Arial'/*,'黑体'*/,'Microsoft Yahei','Simsun';color:#808080;background:#fff; min-width:320px; height:100%;}
+        body,div,p,a,li,ul,ol,span,input,dl,dd,dt,form,h1,h2,h3,h4,h5,h6,select,pre,img,textarea{padding:0;margin:0;outline:none;font-size:system;border:0 none;text-decoration:none;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+        form{display:inline}
+        ul,ol{list-style:none}
+        a{text-decoration:none;color:#808080;}
+        u{ text-decoration:none; color:#ef3a2d;}
+        img{ border:0;}
+        button,input,select,textarea{font-size:100%;vertical-align:middle;outline:none;}
+        textarea{resize:none}
+        button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;-moz-appearance:button}
+        input {-webkit-user-select: text}
+        input:focus:-moz-placeholder,input:focus::-webkit-input-placeholder{color:transparent}
+        button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+        table{border-collapse:collapse;border-spacing:0}
+        header,footer,article,section,nav,menu{display:block;clear:all;}
+
+        .fl{float:left;}
+        .fr{float:right;}
+        .clear{clear:both;zoom:1;}
+        .clear:after {content:".";display:block;clear:both;height:0;visibility:hidden;}
+        
+        .wrapper{width: 1270px;height: 718px;position: absolute;top: 50%;left: 50%;margin: -359px 0 0 -635px;background: url("/download/w/images/down-pc-bg.png") no-repeat;}
+        .left-img{width: 615px;}
+        .right-info{width: 370px;text-align: center;margin-left: 80px;padding-top: 50px;}
+        .qr{margin-top: 30px;}
+        .app-down{padding-top: 50px;}
+        .app-down div{margin-top: 20px;cursor: pointer}
+        .foot{width: 100%;text-align: center;margin-top: 30px;line-height: 30px;font-size: 15px;color: #333}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main-content clear">
+        <div class="left-img fl"><img src="/download/w/images/img-pc.png"> </div>
+        <div class="right-info fl">
+            <div class="logo"><img src="/download/w/images/logo-pc.png"> </div>
+            <div class="qr"><img src="/download/w/images/qr-pc.png"> </div>
+            <div class="app-down">
+                <div class="down-ios"><img src="/download/w/images/down-pc-ios.png"></div>
+                <div class="down-android"><img src="/download/w/images/down-pc-android.png"></div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">版权所有 © 杭州祖玛科技有限公司 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 浙ICP备 B2-20100005</div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('.down-ios').click(function(){
+            window.location.href =" ";
+            _hmt.push(['_trackEvent', 'ios下载']);
+        })
+        $('.down-android').click(function(){
+            window.location.href ="http://u.ringbox.cn/static/yilingchangxiang/android/1.0.0.0/yiling_1.0.0.0_40006062.apk";
+            _hmt.push(['_trackEvent', 'Android下载']);
+        })
+    })
+
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?a6174dd1fc90c111e6a1d037c7095fb4";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    
+</script>
+</body>
+</html>

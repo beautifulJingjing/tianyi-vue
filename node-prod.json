@@ -1,0 +1,21 @@
+{
+  "apps": [
+    {
+      "name": "tianyiVue",
+      "script": "app.js",
+      "watch": true,
+      "ignore_watch": [
+        "node_modules",
+        "front",
+        "log"
+      ],
+      "error_file": "log/pm2/app-err.log",
+      "out_file": "log/pm2/app-out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3006
+      }
+    }
+  ]
+}

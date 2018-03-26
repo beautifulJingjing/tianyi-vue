@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>test</title>
+</head>
+<body>
+  <div id="show"></div>
+  <script src="https://cdn.bootcss.com/axios/0.16.2/axios.js"></script>
+  <script>
+    const show = document.getElementById('show')
+    axios({
+      url: '/api/getSearch',
+      method: 'get',
+      params: { 
+        spinfocode: '02440710401',
+        // pid: -1,
+        // phone: '15757115530',
+        // phone: '17712848081',
+        // rid: 3445780
+        key: '薛之谦'
+      }
+    }).then(ret => {
+      show.innerHTML = JSON.stringify(ret.data)
+    })
+  </script>
+</body>
+</html>

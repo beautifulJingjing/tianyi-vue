@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="shortcut icon" href="/static/favicon.ico"/>
+  <title>翼铃VIP</title>
+  <script>
+    window.spcode = <%= htmlWebpackPlugin.options.locals.spcode %>;
+    window.spconfig = <%= htmlWebpackPlugin.options.locals.config %>;
+    window.hmid = <%= htmlWebpackPlugin.options.locals.hmid %>;
+  </script>
+</head>
+<body class="fz14">
+<script>
+  (function(win) {
+    var docEl = document.documentElement;
+    var headEl = document.getElementsByTagName('head')[0];
+    var dpr = win.devicePixelRatio;
+    var scale = 1 / dpr;
+    var metaEl = document.createElement('meta');
+    var styleEl = document.createElement('style');
+
+    metaEl.setAttribute('name', 'viewport');
+    metaEl.setAttribute('content', 'width=device-width, initial-scale=' + scale + ', minimum-scale=' + scale + ', maximum-scale=' + scale + ', user-scalable=no');
+
+    headEl.appendChild(metaEl);
+
+    var docElWidth = docEl.getBoundingClientRect().width;
+    // htc bug
+    if (docElWidth <= screen.availWidth) dpr = 1;
+
+    docEl.setAttribute('data-dpr', dpr);
+
+    // font style
+    styleEl.innerHTML =
+      '.fz10{font-size:' + 10 * dpr + 'px}' +
+      '.fz11{font-size:' + 11 * dpr + 'px}' +
+      '.fz12{font-size:' + 12 * dpr + 'px}' +
+      '.fz13{font-size:' + 13 * dpr + 'px}' +
+      '.fz14{font-size:' + 14 * dpr + 'px}' +
+      '.fz15{font-size:' + 15 * dpr + 'px}' +
+      '.fz16{font-size:' + 16 * dpr + 'px}' +
+      '.fz17{font-size:' + 17 * dpr + 'px}' +
+      '.fz18{font-size:' + 18 * dpr + 'px}' +
+      '.fz19{font-size:' + 19 * dpr + 'px}' +
+      '.fz20{font-size:' + 20 * dpr + 'px}' +
+      '.fz21{font-size:' + 21 * dpr + 'px}' +
+      '.fz22{font-size:' + 22 * dpr + 'px}' +
+      '.fz23{font-size:' + 23 * dpr + 'px}' +
+      '.fz24{font-size:' + 24 * dpr + 'px}' +
+      '.fz25{font-size:' + 25 * dpr + 'px}' +
+      '.fz28{font-size:' + 28 * dpr + 'px}' +
+      '.fz30{font-size:' + 30 * dpr + 'px}';
+
+    // headEl.insertBefore(styleEl, headEl.firstChild);
+    headEl.appendChild(styleEl);
+
+    // 设置最大显示宽度
+    var isMobile = /mobile/i.test(navigator.userAgent)
+    var usefulAreaWidth = isMobile ? docElWidth : docElWidth / dpr > 580 ? 580 * dpr : docElWidth;
+    if (!isMobile) {
+      var elBody = document.body
+      elBody.style.maxWidth = usefulAreaWidth + 'px';
+      elBody.style.margin = '0 auto';
+    }
+    docEl.style.fontSize = 40 * usefulAreaWidth / 640 + 'px';
+  })(window)
+</script>
+<div id="app"></div>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?a6174dd1fc90c111e6a1d037c7095fb4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  if(window.hmid != '') {
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + window.hmid;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      
+    })()
+  };
+</script>
+</body>
+</html>
